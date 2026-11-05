@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olive Garden – $750 Gift Card</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#f7f7f4;
+  min-height:100vh;
+  display:flex;justify-content:center;
+  padding:10px 14px 24px;
+  -webkit-text-size-adjust:100%;
+}
+.card{
+  width:100%;max-width:440px;
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+  align-self:flex-start;
+}
+
+/* HEADER */
+.header{
+  background:linear-gradient(145deg,#176b36 0%,#1b8a47 55%,#145a2e 100%);
+  padding:20px 18px 20px;
+  text-align:center;
+  color:#fff;
+}
+.brand{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  margin-bottom:10px;
+}
+.brand svg{width:28px;height:28px;flex-shrink:0;}
+.brand-name{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:26px;font-weight:700;letter-spacing:0.2px;
+}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fcd34d;color:#14532d;
+  font-size:15px;font-weight:800;
+  padding:8px 18px;border-radius:50px;
+  margin-bottom:14px;
+}
+.pill svg{width:17px;height:17px;}
+.header h1{
+  font-size:22px;font-weight:800;line-height:1.2;
+  margin-bottom:8px;
+}
+.header p{
+  font-size:14px;line-height:1.45;
+  color:rgba(255,255,255,0.92);
+  max-width:280px;margin:0 auto;
+}
+.header p b{color:#fff;font-weight:800;}
+
+/* BODY */
+.body{padding:16px 18px 20px;}
+
+.steps{display:flex;flex-direction:column;gap:7px;margin-bottom:14px;}
+.step{
+  display:flex;align-items:center;gap:12px;
+  background:#f9f9f6;
+  border:1px solid #efefe9;
+  border-radius:14px;
+  padding:10px 14px;
+}
+.step-num{
+  width:30px;height:30px;min-width:30px;
+  border-radius:50%;
+  background:#1a6637;color:#fff;
+  font-size:14px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-text{font-size:14.5px;color:#2a2a2a;line-height:1.4;}
+.step-text b{font-weight:800;color:#111;}
+
+.cta{
+  display:block;width:100%;
+  background:#1a6637;color:#fff;
+  font-size:15px;font-weight:800;letter-spacing:2.5px;
+  text-align:center;text-decoration:none;text-transform:uppercase;
+  padding:15px;border-radius:14px;
+  box-shadow:0 6px 16px rgba(26,102,55,0.28);
+  margin-bottom:10px;
+  position:relative;overflow:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+.cta::after{
+  content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);
+  animation:sweep 2.6s ease-in-out infinite;
+}
+@keyframes sweep{0%{left:-100%}60%,100%{left:130%}}
+.cta:active{transform:scale(0.98);}
+.note{
+  font-size:12px;color:#8a8a85;text-align:center;line-height:1.5;
+  margin-bottom:18px;
+}
+
+hr{border:none;border-top:1px solid #ececE6;margin-bottom:18px;}
+
+/* FAQ */
+.faq-title{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:24px;font-weight:700;color:#14532d;
+  margin-bottom:16px;
+}
+.faq-item{
+  background:#f9f9f6;border:1px solid #efefe9;
+  border-radius:16px;margin-bottom:10px;overflow:hidden;
+}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:17px 18px;font-size:15.5px;font-weight:700;color:#1f1f1f;
+  cursor:pointer;user-select:none;
+}
+.chev{font-size:18px;color:#1a6637;transition:transform .25s;flex-shrink:0;}
+.faq-item.open .chev{transform:rotate(180deg);}
+.faq-a{
+  max-height:0;overflow:hidden;padding:0 18px;
+  font-size:14.5px;line-height:1.65;color:#666;
+  transition:max-height .3s ease,padding .3s ease;
+}
+.faq-item.open .faq-a{max-height:180px;padding:0 18px 17px;}
+
+.promo{
+  margin-top:22px;
+  border:1px solid #ececE6;border-radius:16px;
+  padding:16px;text-align:center;
+  font-size:13px;color:#9a9a95;line-height:1.6;
+}
+@media (max-height:720px){
+  body{padding-top:6px;}
+  .header{padding:14px 16px 14px;}
+  .brand{margin-bottom:6px;}
+  .brand-name{font-size:23px;}
+  .pill{margin-bottom:10px;padding:6px 16px;font-size:14px;}
+  .header h1{font-size:20px;margin-bottom:6px;}
+  .header p{font-size:13px;}
+  .body{padding-top:12px;}
+  .steps{gap:5px;margin-bottom:10px;}
+  .step{padding:7px 12px;}
+  .step-num{width:26px;height:26px;min-width:26px;font-size:13px;}
+  .step-text{font-size:13.5px;}
+  .cta{padding:13px;}
+}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 2l18 18"/><path d="M21 2L3 20"/>
+        <path d="M15 4c2-1 4-.5 5 .5-1 1-3 2.5-5 3"/><path d="M9 4v5a3 3 0 0 0 2 2.8"/>
+      </svg>
+      <span class="brand-name">Olive Garden</span>
+    </div>
+    <div class="pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#14532d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+      $750 Gift Card
+    </div>
+    <h1>Complete Your Registration</h1>
+    <p>Follow these simple steps to claim your <b>$750 Olive Garden gift card</b></p>
+  </div>
+
+  <div class="body">
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-text">Click on <b>"Claim Now"</b></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text">Enter your email and basic info</div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text">Complete 3–5 sponsored deals</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-text">Enjoy your <b>$750 Olive Garden gift card!</b></div></div>
+    </div>
+
+    <a class="cta" href="https://giftclick.org/?offer_id=4334&aff_id=170353">Claim Now</a>
+    <p class="note">By clicking "Claim Now", you agree to complete the required steps to receive your gift card.</p>
+
+    <hr>
+
+    <div class="faq-title">Frequently Asked Questions</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>What are deals?</span><span class="chev">&#8964;</span></div>
+      <div class="faq-a">Deals are sponsored offers from our partners, such as free trials, surveys, app downloads or quick sign-ups. You choose which ones to complete.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>How many deals do I have to do?</span><span class="chev">&#8964;</span></div>
+      <div class="faq-a">You need to complete 3–5 sponsored deals to qualify for your $750 Olive Garden gift card.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span>When will I receive my reward?</span><span class="chev">&#8964;</span></div>
+      <div class="faq-a">Your gift card is delivered digitally within 24–48 hours after all required deals are completed and verified.</div>
+    </div>
+
+    <div class="promo">This is a promotional offer. Reward fulfillment subject to deal completion and verification.</div>
+  </div>
+
+</div>
+</body>
+</html>
